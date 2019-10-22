@@ -6,6 +6,19 @@ nav{
     top: 0;
     z-index: 10;
     background-color: white;
+    .logo-wrap{
+        .flex(row, nowrap, space-between, center);
+        align-items: center;
+        white-space: nowrap;
+        .logo{
+            max-width: 100px;
+            margin-left: 30px;
+        }
+        h3{
+            font-family: "Poppins";
+            font-size: 2.5rem;
+        }
+    }
     ul{
         margin-right: 30px;
         .flex(row, wrap, flex-end, center);
@@ -16,13 +29,8 @@ nav{
                 margin-left: 15px;
                 .hover-transition();
             }
-            .hover-transition();
         }
 
-    }
-    .logo{
-        max-width: 100px;
-        margin-left: 30px;
     }
     @media @tablet{
         width: 100%;
