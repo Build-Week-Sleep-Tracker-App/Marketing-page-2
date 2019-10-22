@@ -1,0 +1,19 @@
+.main-colors() {
+    color: @main-font-color;
+    background-color: @main-background-color;
+}
+
+.flex(@direction: row, @wrap: nowrap, @justify: flex-start, @align-content: stretch){
+    display: flex;
+    flex-direction: @direction;
+    flex-wrap: @wrap;
+    justify-content: @justify;
+    align-content: @align-content;
+}
+
+.hover-transition(){
+    transition: color 0.2s;
+    :hover{
+        color: lighten(@main-font-color, 40%);
+    }
+}
