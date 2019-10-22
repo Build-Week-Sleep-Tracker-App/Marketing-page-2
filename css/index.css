@@ -1,0 +1,295 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  color: #2b2a31;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Playfair Display', sans-serif;
+  color: #2b2a31;
+}
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+p,
+a {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+nav {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: white;
+}
+nav ul {
+  margin-right: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: center;
+}
+nav ul li {
+  transition: color 0.2s;
+}
+nav ul li a {
+  color: #2b2a31;
+  text-decoration: none;
+  margin-left: 15px;
+  transition: color 0.2s;
+}
+nav ul li a :hover {
+  color: #8e8b9c;
+}
+nav ul li :hover {
+  color: #8e8b9c;
+}
+nav .logo {
+  max-width: 100px;
+  margin-left: 30px;
+}
+@media (max-width: 800px) {
+  nav {
+    width: 100%;
+    justify-content: space-around;
+  }
+  nav ul {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+header {
+  text-align: center;
+  margin: 100px 0 15px;
+}
+header h2 {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+header .bg-wrap {
+  height: 500px;
+  width: 100%;
+  background-color: black;
+  background-image: url("../images/sleep-img-header.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+}
+header .bg-wrap .header-content {
+  text-align: start;
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+}
+header .bg-wrap .header-content h1 {
+  font-size: 5rem;
+  color: white;
+}
+header .bg-wrap .header-content p {
+  margin: 20px 0;
+}
+header .bg-wrap .header-content button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+}
+header .bg-wrap .header-content button a {
+  text-decoration: none;
+  color: black;
+}
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.home .content-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.home .content-card .card-image,
+.home .content-card .text-content {
+  width: 50%;
+}
+.home .content-card .text-content {
+  text-align: center;
+}
+.home .content-card .text-content button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 20px 55px;
+  margin: 10px auto;
+}
+.home .content-card .text-content button a {
+  font-size: 1.1rem;
+  letter-spacing: 0.4rem;
+  text-decoration: none;
+  color: white;
+}
