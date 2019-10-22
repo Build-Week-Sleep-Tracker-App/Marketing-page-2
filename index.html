@@ -6,6 +6,7 @@
     <title>Sleep Tracker App</title>
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display%7CPoppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav>
@@ -30,23 +31,106 @@
                     <p>
                         Hi, we're Sleep Tracker App. Your new secret weapon for personal improvement.
                     </p>
-                    <button type="button">
-                        <a href="#">SIGN IN</a>
-                    </button>
+                    <a href="#">
+                        SIGN IN
+                    </a>
                 </div>
             </div>
     </header>
-    <div class="container home">
-    <div class="content-card">
-        <img class = "card-image" src="images/first-card.jpg" alt="Woman sleeping at a table">
-        <div class="text-content">
-            <h1>What’s the big deal with sleep?</h1>
-            <p>When you sleep better, you’re more ready to perform.<br>
-                    Tracking your sleep will help you do both.</p>
-            <button type="button">
-                <a href="#">WHY SLEEP</a>
-            </button>
+    <section class="container home">
+
+        <div class="content-card">
+            <img class = "card-image" src="images/first-card.jpg" alt="Woman sleeping at a table">
+            <div class="text-content">
+                <div class="text-wrap">
+                    <h1>What’s the big deal with sleep?</h1>
+                    <p>When you sleep better, you’re more ready to perform.<br>
+                            Tracking your sleep will help you do both.</p>
+                    <a href="#">
+                        WHY SLEEP
+                    </a>
+                </div>
+            </div>
+        </div><!--content card-->
+
+        <div class="content-card reverse">
+            <img class = "card-image" src="images/subscribtion.jpg" alt="Man in the mountains">
+            <div class="text-content">
+                <div class="text-wrap">
+                    <h1>JOIN THE INSIDERS.</h1>
+                    <p>THE SCIENCE OF SLEEP STRAIGHT INTO YOUR INBOX.</p>
+                    <input type="email" placeholder="Enter your email" required>
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </div><!--content card-->
+
+        <div class="content-card">
+            <img class = "card-image" src="images/about-us-home.jpg" alt="Group of Lambda School Students">
+            <div class="text-content">
+                <div class="text-wrap">
+                    <h1>Who are we?</h1>
+                    <p>Do you want to learn more about our team?</p>
+                    <a href="#">
+                        GO HERE
+                    </a>
+                </div><!--text-wrap-->
+            </div><!--text-content-->
+        </div><!--content-card-->
+
+    </section>
+
+    <section class="media-carousel">
+        <div class="media-card">
+            <img src="images/NY_Times_logo.jpg" alt="New Your Times logo" class="media-logo">
+            <p class = 'blurb'>
+                “Wow, what a great app!
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut 
+                labore et dolore magna aliqua.”
+            </p>
+            <p class="quote">
+                -The New York Times
+            </p>
         </div>
-    </div>
+
+        <div class="media-card">
+            <img src="images/The_Guardian_logo.jpg" alt="The Guardian Logo" class="media-logo">
+            <p class="blurb">“Wow, what a great app!
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua.”</p>
+            <p class="quote">-The Guardian</p>
+        </div>
+        <div class="media-card">
+            <img src="images/TechCrunch-Logo-blackwhite.jpg" alt="Tech Crunch Logo" class="media-logo">
+            <p class="blurb">“Wow, what a great app!
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua.”</p>
+            <p class="quote">-Tech Crunch</p>
+        </div>
+        <div class="media-card">
+            <img src="images/techradar_logo.jpg" alt="Tech Radar Logo" class="media-logo">
+            <p class="blurb">“Wow, what a great app!
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua.”</p>
+            <p class="quote">-TechRadar</p>
+        </div>
+    </section><!--media-carousel-->
+
+    <footer>
+        <div class="sm-icons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-github"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        </div><!--sm-icons-->
+        <div class="copyright">
+            <img src="images/iconfinder_hat_20_2875611.svg" alt="" class="logo">
+            <p>© 2019 Sergei Kabuldzhanov. All Rights Reserved.</p>
+        </div><!--copyright-->
+    </footer>
 </body>
 </html>

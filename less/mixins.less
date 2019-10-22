@@ -4,16 +4,47 @@
 }
 
 .flex(@direction: row, @wrap: nowrap, @justify: flex-start, @align-content: stretch){
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: @direction;
-    flex-wrap: @wrap;
-    justify-content: @justify;
-    align-content: @align-content;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: @direction;
+            flex-direction: @direction;
+    -ms-flex-wrap: @wrap;
+        flex-wrap: @wrap;
+    -webkit-box-pack: @justify;
+        -ms-flex-pack: @justify;
+            justify-content: @justify;
+    -ms-flex-line-pack: @align-content;
+        align-content: @align-content;
 }
 
 .hover-transition(){
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
-    :hover{
+    -moz-transition: color 0.2s;
+    &:hover{
         color: lighten(@main-font-color, 40%);
+    }
+}
+
+.button(@color, @bg-color){
+    cursor: pointer;
+    width: 200px;
+    height: 57px;
+    .flex(column, wrap, center , center);
+    color: @color;
+    background-color: @bg-color;
+    -webkit-transition: color 0.2s, background-color 0.2s;
+    transition: color 0.2s, background-color 0.2s;
+    border: none;
+    font-size: 1.4rem;
+    letter-spacing: 0.4rem;
+    text-decoration: none;
+    border: 1px solid @bg-color;
+    &:hover{
+        color: @bg-color;
+        background-color: @color;
     }
 }
