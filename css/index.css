@@ -186,6 +186,32 @@ nav {
   z-index: 10;
   background-color: white;
 }
+nav .logo-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+nav .logo-wrap .logo {
+  max-width: 100px;
+  margin-left: 30px;
+}
+nav .logo-wrap h3 {
+  font-family: "Poppins";
+  font-size: 2.5rem;
+}
 nav ul {
   margin-right: 30px;
   display: -webkit-box;
@@ -213,10 +239,6 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: #8e8b9c;
-}
-nav .logo {
-  max-width: 100px;
-  margin-left: 30px;
 }
 @media (max-width: 800px) {
   nav {
@@ -481,6 +503,11 @@ footer .copyright p {
   height: 57px;
   border: 1px solid black;
   width: 200px;
+  padding-left: 15px;
+  font-family: "Poppins";
+}
+.home .content-card.reverse input[type='email']::placeholder {
+  font-family: "Poppins";
 }
 .home .content-card.reverse input[type='submit'] {
   cursor: pointer;
@@ -515,6 +542,44 @@ footer .copyright p {
   color: black;
   background-color: white;
 }
+.why-sleep {
+  padding: 20px 10%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  background-image: url(../images/atmosphere-parallax-home.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.why-sleep h3 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+.why-sleep .health-card {
+  margin: 15px 0;
+  width: 30%;
+}
+.why-sleep .health-card h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
 .media-carousel {
   width: 90%;
   margin: 0 auto;
@@ -539,8 +604,9 @@ footer .copyright p {
   text-align: center;
   font-size: 1.2rem;
 }
-.media-carousel .media-card img {
-  max-height: 300px;
+.media-carousel .media-card .media-logo {
+  max-width: 300px;
+  margin: 0 auto;
 }
 .media-carousel .media-card .blurb {
   font-size: 1.4rem;
