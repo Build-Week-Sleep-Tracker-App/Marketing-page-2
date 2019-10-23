@@ -40,4 +40,30 @@
             }
         }
     }
+    @media @tablet-big{
+        .content-card{
+            input{
+                display: block;
+                margin: 5px auto;
+            }
+            .text-content{
+                .text-wrap{
+                    p{
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+    @media @tablet{
+        .content-card{
+            flex-direction: column;
+            .card-image, .text-content{
+                width: 100%;
+            }
+            .text-content{
+                padding: 20px 0;
+            }
+        }
+    }
 }

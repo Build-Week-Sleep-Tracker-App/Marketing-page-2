@@ -586,6 +586,27 @@ footer .copyright p {
   color: black;
   background-color: white;
 }
+@media (max-width: 1000px) {
+  .home .content-card input {
+    display: block;
+    margin: 5px auto;
+  }
+  .home .content-card .text-content .text-wrap p {
+    margin: 10px 0;
+  }
+}
+@media (max-width: 800px) {
+  .home .content-card {
+    flex-direction: column;
+  }
+  .home .content-card .card-image,
+  .home .content-card .text-content {
+    width: 100%;
+  }
+  .home .content-card .text-content {
+    padding: 20px 0;
+  }
+}
 .why-sleep {
   padding: 20px 10%;
   text-align: center;
@@ -624,6 +645,16 @@ footer .copyright p {
   font-size: 2rem;
   margin: 10px 0;
 }
+@media (max-width: 500px) {
+  .why-sleep {
+    padding: 10px;
+    flex-direction: column;
+    height: 1300px;
+  }
+  .why-sleep .health-card {
+    width: 100%;
+  }
+}
 .media-carousel {
   width: 90%;
   margin: 0 auto;
@@ -642,6 +673,11 @@ footer .copyright p {
   -ms-flex-line-pack: center;
   align-content: center;
 }
+.media-carousel h2 {
+  padding-top: 30px;
+  width: 100%;
+  text-align: center;
+}
 .media-carousel .media-card {
   width: 40%;
   min-width: 300px;
@@ -657,6 +693,14 @@ footer .copyright p {
 }
 .media-carousel .media-card .quote {
   margin: 20px;
+}
+@media (max-width: 500px) {
+  .media-carousel h2 {
+    padding-bottom: 20px;
+  }
+  .media-carousel .media-card .media-logo {
+    display: none;
+  }
 }
 .about {
   display: -webkit-box;

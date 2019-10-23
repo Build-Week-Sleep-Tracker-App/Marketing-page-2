@@ -2,6 +2,11 @@
     width: 90%;
     margin: 0 auto;
     .flex(row, wrap, space-evenly, center);
+    h2{
+        padding-top: 30px;
+        width: 100%;
+        text-align: center;
+    }
     .media-card{
         width: 40%;
         min-width: 300px;
@@ -19,6 +24,13 @@
         }
     }
     @media @mobile{
-        
+        h2{
+            padding-bottom: 20px;
+        }
+        .media-card{
+            .media-logo{
+                display: none;
+            }
+        }
     }
 }
