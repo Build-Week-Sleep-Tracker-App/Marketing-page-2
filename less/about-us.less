@@ -39,8 +39,10 @@
         max-width: 300px;
         margin: 20px 10px;
         img{
-            object-fit: cover;
-            object-position: center center;
+            -o-object-fit: cover;
+               object-fit: cover;
+            -o-object-position: center center;
+               object-position: center center;
             width: 300px;
             height: 300px;
         }
@@ -62,6 +64,7 @@
                 margin: 0 auto;
             }
         }
+        -webkit-transition: ease-in-out border 0.1s, ease-in-out width 0.1s, ease-in-out height 0.1s;
         transition: ease-in-out border 0.1s, ease-in-out width 0.1s, ease-in-out height 0.1s;
         &:hover{
             border: 5px solid black;
