@@ -30,13 +30,53 @@
                 width: 200px;
                 padding-left: 15px;
                 font-family: "Poppins";
+                &::-webkit-input-placeholder{
+                    font-family: "Poppins";
+                }
+                &:-ms-input-placeholder{
+                    font-family: "Poppins";
+                }
+                &::-ms-input-placeholder{
+                    font-family: "Poppins";
+                }
                 &::placeholder{
                     font-family: "Poppins";
                 }
             }
             &[type = 'submit']{
                 .button(white, black);
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
                 display: inline-flex;
+            }
+        }
+    }
+    @media @tablet-big{
+        .content-card{
+            input{
+                display: block;
+                margin: 5px auto;
+            }
+            .text-content{
+                .text-wrap{
+                    p{
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+    @media @tablet{
+        .content-card{
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            .card-image, .text-content{
+                width: 100%;
+            }
+            .text-content{
+                padding: 20px 0;
             }
         }
     }

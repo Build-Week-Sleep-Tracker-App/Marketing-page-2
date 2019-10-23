@@ -7,17 +7,7 @@ nav{
     z-index: 10;
     background-color: white;
     .logo-wrap{
-        .flex(row, nowrap, space-between, center);
-        align-items: center;
-        white-space: nowrap;
-        .logo{
-            max-width: 100px;
-            margin-left: 30px;
-        }
-        h3{
-            font-family: "Poppins";
-            font-size: 2.5rem;
-        }
+        margin: 0;
     }
     ul{
         margin-right: 30px;
@@ -32,12 +22,28 @@ nav{
         }
 
     }
-    @media @tablet{
+    @media @tablet-big{
         width: 100%;
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         ul{
             width: 100%;
-            justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+        }
+    }
+    @media @mobile{
+        .logo-wrap{
+            display: none;
+        }
+        ul{
+            padding: 10px 0;
+            li{
+                display: none;
+                &:nth-child(2n-1){
+                    display: inline-block;
+                }
+            }
         }
     }
 }

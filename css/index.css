@@ -127,10 +127,12 @@ table {
   border-spacing: 0;
 }
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 html,
 body {
@@ -164,6 +166,49 @@ a {
   width: 100%;
   margin: 0 auto;
 }
+strong {
+  font-weight: bold;
+}
+.logo-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+.logo-wrap .logo {
+  max-width: 100px;
+  min-width: 100px;
+  margin-left: 30px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.logo-wrap h3 {
+  font-family: "Poppins";
+  font-size: 2.5rem;
+}
+@media (max-width: 800px) {
+  .logo-wrap {
+    padding: 20px;
+  }
+  .logo-wrap .logo {
+    display: none;
+  }
+}
 nav {
   width: 100%;
   margin: 0 auto;
@@ -187,30 +232,7 @@ nav {
   background-color: white;
 }
 nav .logo-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: space-between;
-  -ms-flex-pack: space-between;
-  justify-content: space-between;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  align-items: center;
-  white-space: nowrap;
-}
-nav .logo-wrap .logo {
-  max-width: 100px;
-  margin-left: 30px;
-}
-nav .logo-wrap h3 {
-  font-family: "Poppins";
-  font-size: 2.5rem;
+  margin: 0;
 }
 nav ul {
   margin-right: 30px;
@@ -240,14 +262,30 @@ nav ul li a {
 nav ul li a:hover {
   color: #8e8b9c;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   nav {
     width: 100%;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
   nav ul {
     width: 100%;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+  }
+}
+@media (max-width: 500px) {
+  nav .logo-wrap {
+    display: none;
+  }
+  nav ul {
+    padding: 10px 0;
+  }
+  nav ul li {
+    display: none;
+  }
+  nav ul li:nth-child(2n-1) {
+    display: inline-block;
   }
 }
 header {
@@ -323,7 +361,6 @@ header .bg-wrap .header-content a {
   background-color: white;
   -webkit-transition: color 0.2s, background-color 0.2s;
   transition: color 0.2s, background-color 0.2s;
-  border: none;
   font-size: 1.4rem;
   letter-spacing: 0.4rem;
   text-decoration: none;
@@ -332,6 +369,14 @@ header .bg-wrap .header-content a {
 header .bg-wrap .header-content a:hover {
   color: white;
   background-color: black;
+}
+@media (max-width: 500px) {
+  header {
+    margin-top: 30px;
+  }
+  header h2 {
+    padding: 25px 10px;
+  }
 }
 footer {
   background-color: black;
@@ -384,10 +429,15 @@ footer .copyright {
   justify-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 footer .copyright .logo {
   width: 100px;
+}
+footer .copyright h3 {
+  color: white;
 }
 footer .copyright p {
   color: white;
@@ -472,7 +522,6 @@ footer .copyright p {
   background-color: black;
   -webkit-transition: color 0.2s, background-color 0.2s;
   transition: color 0.2s, background-color 0.2s;
-  border: none;
   font-size: 1.4rem;
   letter-spacing: 0.4rem;
   text-decoration: none;
@@ -506,6 +555,15 @@ footer .copyright p {
   padding-left: 15px;
   font-family: "Poppins";
 }
+.home .content-card.reverse input[type='email']::-webkit-input-placeholder {
+  font-family: "Poppins";
+}
+.home .content-card.reverse input[type='email']:-ms-input-placeholder {
+  font-family: "Poppins";
+}
+.home .content-card.reverse input[type='email']::-ms-input-placeholder {
+  font-family: "Poppins";
+}
 .home .content-card.reverse input[type='email']::placeholder {
   font-family: "Poppins";
 }
@@ -531,16 +589,41 @@ footer .copyright p {
   background-color: black;
   -webkit-transition: color 0.2s, background-color 0.2s;
   transition: color 0.2s, background-color 0.2s;
-  border: none;
   font-size: 1.4rem;
   letter-spacing: 0.4rem;
   text-decoration: none;
   border: 1px solid black;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 .home .content-card.reverse input[type='submit']:hover {
   color: black;
   background-color: white;
+}
+@media (max-width: 1000px) {
+  .home .content-card input {
+    display: block;
+    margin: 5px auto;
+  }
+  .home .content-card .text-content .text-wrap p {
+    margin: 10px 0;
+  }
+}
+@media (max-width: 800px) {
+  .home .content-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .home .content-card .card-image,
+  .home .content-card .text-content {
+    width: 100%;
+  }
+  .home .content-card .text-content {
+    padding: 20px 0;
+  }
 }
 .why-sleep {
   padding: 20px 10%;
@@ -580,6 +663,19 @@ footer .copyright p {
   font-size: 2rem;
   margin: 10px 0;
 }
+@media (max-width: 500px) {
+  .why-sleep {
+    padding: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 1300px;
+  }
+  .why-sleep .health-card {
+    width: 100%;
+  }
+}
 .media-carousel {
   width: 90%;
   margin: 0 auto;
@@ -598,6 +694,11 @@ footer .copyright p {
   -ms-flex-line-pack: center;
   align-content: center;
 }
+.media-carousel h2 {
+  padding-top: 30px;
+  width: 100%;
+  text-align: center;
+}
 .media-carousel .media-card {
   width: 40%;
   min-width: 300px;
@@ -613,4 +714,178 @@ footer .copyright p {
 }
 .media-carousel .media-card .quote {
   margin: 20px;
+}
+@media (max-width: 500px) {
+  .media-carousel h2 {
+    padding-bottom: 20px;
+  }
+  .media-carousel .media-card .media-logo {
+    display: none;
+  }
+}
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+.about header {
+  text-align: center;
+  margin: 110px 0 15px;
+  width: 100%;
+}
+.about header h2 {
+  background-color: black;
+  color: white;
+  padding: 30px 0;
+  font-family: "Poppins";
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  line-height: 1.4;
+  font-size: 5rem;
+}
+.about header .bg-wrap {
+  height: 500px;
+  width: 100%;
+  background-color: black;
+  background-image: url("../images/team-about-bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+.about header .bg-wrap .header-content {
+  text-align: start;
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+}
+.about header .bg-wrap .header-content h1 {
+  font-size: 5rem;
+  color: white;
+}
+.about header .bg-wrap .header-content p {
+  margin: 20px 0;
+}
+.about header .bg-wrap .header-content a {
+  cursor: pointer;
+  width: 200px;
+  height: 57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  color: black;
+  background-color: white;
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
+  font-size: 1.4rem;
+  letter-spacing: 0.4rem;
+  text-decoration: none;
+  border: 1px solid white;
+}
+.about header .bg-wrap .header-content a:hover {
+  color: white;
+  background-color: black;
+}
+.about .developer {
+  max-width: 300px;
+  margin: 20px 10px;
+  -webkit-transition: ease-in-out border 0.1s, ease-in-out width 0.1s, ease-in-out height 0.1s;
+  transition: ease-in-out border 0.1s, ease-in-out width 0.1s, ease-in-out height 0.1s;
+}
+.about .developer img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center center;
+  object-position: center center;
+  width: 300px;
+  height: 300px;
+}
+.about .developer .text-content {
+  padding: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.about .developer .text-content h2 {
+  font-family: "Poppins";
+  font-size: 2rem;
+  height: 80px;
+  line-height: 1.25;
+}
+.about .developer .text-content p {
+  height: 100px;
+}
+.about .developer .text-content a {
+  cursor: pointer;
+  width: 200px;
+  height: 57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  color: white;
+  background-color: black;
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
+  font-size: 1.4rem;
+  letter-spacing: 0.4rem;
+  text-decoration: none;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+.about .developer .text-content a:hover {
+  color: black;
+  background-color: white;
+}
+.about .developer:hover {
+  border: 5px solid black;
+}
+.about .developer:hover img {
+  width: 290px;
+  height: 290px;
 }

@@ -1,0 +1,77 @@
+.about{
+    .flex(row, wrap, space-evenly, center);
+    header{
+        text-align: center;
+        margin: 110px 0 15px;
+        width: 100%;
+        h2{
+            background-color: black;
+            color: white;
+            padding: 30px 0;
+            font-family: "Poppins";
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            line-height: 1.4;
+            font-size: 5rem;
+        }
+        .bg-wrap{
+            .parallax-bg(500px, 100%, url("../images/team-about-bg.jpg"));
+            .flex(column, nowrap, center, center);
+            .header-content{
+                text-align: start;
+                width: 80%;
+                margin: 0 auto;
+                color: white;
+                h1{
+                    font-size: 5rem;
+                    color: white;
+                }
+                p{
+                    margin: 20px 0;
+                }
+                a{
+                    .button(black, white);
+                }
+            }
+        }
+    }    
+    .developer{
+        max-width: 300px;
+        margin: 20px 10px;
+        img{
+            -o-object-fit: cover;
+               object-fit: cover;
+            -o-object-position: center center;
+               object-position: center center;
+            width: 300px;
+            height: 300px;
+        }
+        .text-content{
+            padding: 10px;
+            text-align: justify;
+            text-justify: inter-word;
+            h2{
+                font-family: "Poppins";
+                font-size: 2rem;
+                height: 80px;
+                line-height: 1.25;
+            }
+            p{
+                height: 100px;
+            }
+            a{
+                .button(white, black);
+                margin: 0 auto;
+            }
+        }
+        -webkit-transition: ease-in-out border 0.1s, ease-in-out width 0.1s, ease-in-out height 0.1s;
+        transition: ease-in-out border 0.1s, ease-in-out width 0.1s, ease-in-out height 0.1s;
+        &:hover{
+            border: 5px solid black;
+            img{
+                width: 290px;
+                height: 290px;
+            }
+        }
+    }
+}

@@ -12,14 +12,7 @@ header{
         font-size: 1.8rem;
     }
     .bg-wrap{
-        height: 500px;
-        width: 100%;
-        background-color: black;
-        background-image: url("../images/sleep-img-header.jpg");
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        .parallax-bg(500px, 100%, url("../images/sleep-img-header.jpg"));
         .flex(column, nowrap, center, center);
         .header-content{
             text-align: start;
@@ -36,6 +29,12 @@ header{
             a{
                 .button(black, white);
             }
+        }
+    }
+    @media @mobile{
+        margin-top: 30px;
+        h2{
+            padding: 25px 10px;
         }
     }
 }
