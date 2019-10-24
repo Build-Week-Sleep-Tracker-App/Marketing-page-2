@@ -194,6 +194,7 @@ strong {
   max-width: 100px;
   min-width: 100px;
   margin-left: 30px;
+  margin-right: 15px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -722,6 +723,29 @@ footer .copyright p {
   .media-carousel .media-card .media-logo {
     display: none;
   }
+}
+.dots-wrapper {
+  position: absolute;
+  width: 100px;
+  left: 50%;
+  margin-left: -50px;
+  bottom: 20px;
+  text-align: center;
+}
+.dots-wrapper li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 4px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.dots-wrapper li.active,
+.dots-wrapper li:hover {
+  opacity: 1;
 }
 .about {
   display: -webkit-box;
